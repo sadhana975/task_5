@@ -36,18 +36,20 @@ INSERT INTO Orders VALUES
 (104, '2024-06-04', 5, 400.00); 
  -- Note: CustomerID 5 doesn't exist in Customers
 
+
+-- left join
 SELECT Customers.CustomerName, Orders.OrderID, Orders.Amount
 FROM Customers
 LEFT JOIN Orders ON Customers.CustomerID = Orders.CustomerID;
 
 
-
+-- right join
 SELECT Customers.CustomerName, Orders.OrderID, Orders.Amount
 FROM Customers
 RIGHT JOIN Orders ON Customers.CustomerID = Orders.CustomerID;
 
 
-
+--union or full join
 SELECT Customers.CustomerName, Orders.OrderID, Orders.Amount
 FROM Customers
 LEFT JOIN Orders ON Customers.CustomerID = Orders.CustomerID
